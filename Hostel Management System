@@ -1,2 +1,300 @@
-# web-development
 
+
+<html>
+	
+	
+<head>
+
+	<link rel="stylesheet" type="text/css" href="C:\Users\Paavamaani Manchala\Documents\HostelManagementSystem/Header.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Paavamaani Manchala\Documents\HostelManagementSystem/SlideShow.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Paavamaani Manchala\Documents\HostelManagementSystem/body.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Paavamaani Manchala\Documents\HostelManagementSystem/Footer.css">
+	<link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+	
+	
+<body>
+	
+	<div class="header">
+
+		<div class="Logo">
+		
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/logo.png" alt="FIZZI HOSTELS">
+		
+		</div>
+		
+		<div class="Name">
+		
+			<h1> FIZZI ACCOMMODATORS </h1>
+		
+		</div>
+		
+		<nav>
+		
+			<ul>
+			
+				<li class="SignUP"> <a href="C:\Users\Paavamaani Manchala\Documents\HostelManagementSystem/SignUP.html"> SignUP </a> </li>
+			
+				<li class="Login"> <a href="C:\Users\Paavamaani Manchala\Documents\HostelManagementSystem/Login.html"> Login </a> </li>
+			
+			</ul>
+			
+		</nav>
+	
+	</div>
+	
+	<div class="Space"></div>
+	
+	<div class="SlideShow">
+		
+		<div class="mySlides fade">
+			<div class="Number">1 / 5</div>
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/slide1.jpg" alt="SLIDE" class="slide1">
+			<div class="Text1">WELCOME TO THE LAND OF FIZZI</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="Number">2 / 5</div>
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/slide2.jpg" alt="SLIDE" class="slide2">
+			<div class="Text2">IT'S YOUR <br> SECOND HOME</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="Number">3 / 5</div>
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/slide3.jpg" alt="SLIDE" class="slide3">
+			<div class="Text3">WORLD CLASS DESIGNING</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="Number">4 / 5</div>
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/slide4.jpg" alt="SLIDE" class="slide4">
+			<div class="Text4">RACES ARE HELD IN WATER</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="Number">5 / 5</div>
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/slide5.jpg" alt="SLIDE" class="slide5">
+			<div class="Text5">FITNESS IS OUR PRIORITY</div>
+		</div>
+		
+		<a class="Prev" onclick="plusSlides(-1)">&#10094</a>
+		
+		<a class="Next" onclick="plusSlides(+1)">&#10095</a>
+		
+		<div class="Spanning" >
+	
+		<span class="Dots" onclick="currentSlide(1)"></span>
+		<span class="Dots" onclick="currentSlide(2)"></span>
+		<span class="Dots" onclick="currentSlide(3)"></span>
+		<span class="Dots" onclick="currentSlide(4)"></span>
+		<span class="Dots" onclick="currentSlide(5)"></span>
+	
+		</div>
+	
+	</div>
+
+	<script>
+	
+	var slideIndex = 1;
+	
+	showSlides(slideIndex);
+
+	
+	function plusSlides(n) {
+	
+	showSlides(slideIndex += n);
+	
+	}
+
+	function currentSlide(n) {
+	
+	showSlides(slideIndex = n);
+	
+	}
+
+	function showSlides(n) {
+	
+	var i;
+	
+	var slides = document.getElementsByClassName("mySlides");
+	
+	var dots = document.getElementsByClassName("Dots");
+	
+	if (n > slides.length) {slideIndex = 1}    
+	
+	if (n < 1) {slideIndex = slides.length}
+	
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+	
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	
+	slides[slideIndex-1].style.display = "block";  
+	dots[slideIndex-1].className += " active";
+	
+	}
+	
+	autoSlide();
+	
+	function autoSlide() {
+	
+	var i;
+	
+	var slides = document.getElementsByClassName("mySlides");
+	
+	var dots = document.getElementsByClassName("Dots");
+	
+	if (slideIndex > slides.length) {slideIndex = 1}    
+	
+	if (slideIndex < 1) {slideIndex = slides.length}
+	
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+	
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	
+	slides[slideIndex-1].style.display = "block";  
+	dots[slideIndex-1].className += " active";
+	
+	slideIndex++;
+	
+	setTimeout(autoSlide,3000);
+	
+	}
+	
+	</script>
+	
+	<div class="Achievement-Header">
+			
+			ACHIEVE<span>MENTS</span>
+		
+	</div>
+	
+	<div class="Achievement">
+		
+		<div class="Achievement-Description"> 
+			
+			FIZZI was awarded as the best accomdation providers across the world in 2009 by Govt of india.
+			Besides it also provides delicious food cooked by chefs from many different countries. FIZZI is 
+			also well known for it's charity works. 
+		
+		</div>
+		
+		<div class="Achievement-Img"> 
+		
+			<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/Achievement.jpg" alt="SLIDE" class="slide1">
+		
+		</div>
+		
+	</div>
+	
+	<div class="Founder-Header">
+			
+			OUR<span>TEAM</span>
+		
+	</div>
+	
+	<div class="Founder">
+		
+		<div class="Founder1">
+		
+			<div class="Founder1-Img"> 
+			
+				<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/p1.jpg" alt="SLIDE" class="slide1">
+			
+			</div>
+		
+			<div class="Founder-Name1">
+		
+				Somashekar
+			
+			</div>
+		
+		</div>
+		
+		<div class="Founder2">
+		
+			<div class="Founder2-Img"> 
+			
+				<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/p2.jpg" alt="SLIDE" class="slide1">
+			
+			</div>
+		
+			<div class="Founder-Name2">
+		
+				Prasad
+			
+			</div>
+		
+		</div>
+		
+		<div class="Founder3">
+		
+			<div class="Founder3-Img"> 
+			
+				<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/p3.jpg" alt="SLIDE" class="slide1">
+			
+			</div>
+		
+			<div class="Founder-Name3">
+			
+				Paavamaani
+			
+			</div>
+		
+		</div>
+		
+	</div>
+	
+	<div class="Footer-Header"></div>
+	
+	<div class="Footer">
+	
+		<div class="Contact">
+	
+			Contact us:
+	
+		</div>
+	
+		<div class="Email">
+	
+			<ul>
+
+				<li> Email: fizziaccomodators@gmail.com </li>
+		
+				<li> All rights are reserved by FIZZI &copy 2018</li>
+		
+			</ul>
+		
+		</div>
+		
+		<div class="Social-Media">
+		
+			<ul>
+		
+				<li> <a href="#"> <img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/google.png" alt="google"> </a> </li>
+				<li> <a href="#"> <img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/youtube.png" alt="youtube"> </a> </li>
+				<li> <a href="#"> <img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/twitter.png" alt="twitter"> </a> </li>
+				<li> <a href="#"> <img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/facebook.png" alt="facebook"> </a> </li>
+				<li> <a href="#"> <img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/instagram.png" alt="instagram"> </a> </li>
+				
+			</ul>
+		
+		</div>
+	
+	</div>
+		
+	
+	
+
+</body>
+	
+</html>
