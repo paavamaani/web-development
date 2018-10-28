@@ -1,4 +1,4 @@
-
+<!-- Dashboard -->
 
 <html>
 	
@@ -297,4 +297,1248 @@
 
 </body>
 	
+</html>
+
+<!-- Sign Up -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Sign Up </title>
+
+<style>
+
+input[type=password], input[type=email] {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+outline: none;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=text], input[type=number] {
+
+width: 35%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+border: 1.85px solid #1EC8DB;
+outline: none;
+
+}
+
+input[type=submit] {
+
+width: 49%;
+color: white;
+background-color: black;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+float:left;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=reset] {
+
+width: 49%;
+background-color: black;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+float:right;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=password]:focus, input[type=email]:focus, input[type=text]:focus  {
+
+border: 1.89px solid black;
+
+}
+
+div {
+
+border-radius: 8px;
+padding: 40px;
+
+}
+
+fieldset {
+
+margin-left: 27.5%;
+margin-right: 27.5%;
+border: 4px solid #000000;
+background: transparent;
+
+}
+
+#Male, #Female {
+
+color: white;
+
+}
+
+body {
+
+background-image: url('signup.jpg');
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+</style>
+
+<script>
+
+function Validate() {
+	
+	var val1 = document.forms["form"]["fname"].value;
+	
+	if(val1 == "") {
+	
+		alert("Enter First Name");
+		return false;
+		
+	}	
+	
+	var val2 = document.forms["form"]["lname"].value;
+	
+	if(val2 == "") {
+	
+		alert("Enter Last Name");
+		return false;
+		
+	}
+	
+	var val3 = document.forms["form"]["email"].value;
+	
+	if(val3 == "") {
+	
+		alert("Enter Email");
+		return false;
+		
+	}
+	
+	var val4 = document.forms["form"]["password"].value;
+	
+	if(val4 == "") {
+		
+		alert("Password is required");
+		return false;
+	
+	}
+	
+	var val5 = document.forms["form"]["confirmpassword"].value;
+	
+	if(val5 == "") {
+	
+		alert("Please confirm your Password");
+		return false;
+	}	
+	
+	var val6 = document.forms["form"]["gender"].value;
+	
+	if(val6 == "") {
+	
+		alert("Please confirm your Gender");
+		return false;
+	}	
+	
+	var val7 = document.forms["form"]["code"].value;
+	
+	if(val7 == "") {
+	
+		alert("Please enter country code");
+		return false;
+	}	
+	
+	var val8 = document.forms["form"]["phone"].value;
+	
+	if(val8 == "") {
+	
+		alert("Please enter mobile number");
+		return false;
+	}	
+	
+	if(val4==val5) {
+	
+		document.getElementById("myform").action="Login.html";
+		return true;
+	}
+	else {
+	
+		alert("Password and Confirm Password don't match");
+		return false;
+
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<center> 
+	
+	<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/logoname.png" alt="United Colors of Benetton" style="width: 200px;height: 100px"> 
+	
+	</center>
+
+<div>
+
+<form action="" method="post" name="form" id="myform">
+
+
+	<fieldset>
+
+		<legend> <h2> Sign Up </h2> </legend> <br> <br>
+		
+		<label>
+			<strong> First Name: </strong>
+			<input type="text" name="fname" placeholder="Enter first name" autocomplete="off">
+		</label> 
+
+		<label>
+			<strong> Last Name: </strong>
+			<input type="text" name="lname" placeholder="Enter last name" autocomplete="off">
+		</label> <br>
+		
+		<label> <br>
+			<strong> Email: </strong> <br>
+			<input type="email" name="email" placeholder="Enter email" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Enter your Password: </strong> <br>
+			<input type="password" name="password" placeholder="Enter password" autocomplete="off">
+		</label> <br> <br>
+
+		<label>
+			<strong> Confirm your Password: </strong> <br>
+			<input type="password" name="confirmpassword" placeholder="Re - enter password" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Gender: </strong>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="gender" value="Male"> <span id="Male"> Male </span>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="gender" value="Female"> <span id="Female"> Female </span>
+		</label> <br> <br>
+	 
+	 <label>
+			<strong> Country Code: </strong>
+			<input type="number" name="code" placeholder="Enter country code" maxlength="3" autocomplete="off">
+	 </label>
+	 
+	 <label>
+			<strong> Mobile: </strong>
+			<input type="number" name="phone" placeholder="Enter mobile number" maxlength="13" autocomplete="off">
+	 </label> <br> <br>
+
+	<center> <input type="submit" value="Sign Up" onclick="Validate()"> <input type="reset" value="Reset"> </center>
+	
+	<br> <br>
+	
+	</fieldset>
+
+</form>
+
+</div>
+			
+</body>
+
+</html>
+
+<!-- Login -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Login </title>
+
+<style>
+
+input[type=password], input[type=email] {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+outline: none;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=submit] {
+
+width: 50%;
+background-color: black;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=password]:focus, input[type=email]:focus {
+
+border: 1.89px solid black;
+
+}
+
+div {
+
+border-radius: 8px;
+padding: 40px;
+
+}
+
+fieldset {
+
+margin-left: 27.5%;
+margin-right: 27.5%;
+border: 4px solid #000000;
+background-color: transparent;
+
+}
+
+body {
+
+background-image: url('signup.jpg');
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+</style>
+
+<script>
+
+function Validate() {
+
+	var val1 = document.forms["form"]["email"].value;
+	
+	if(val1 == "") {
+	
+		alert("Enter Email");
+		return false;
+		
+	}
+	
+	var val2 = document.forms["form"]["password"].value;
+	
+	if(val2 == "") {
+		
+		alert("Password is required");
+		return false;
+	
+	}
+	else {
+	
+		document.getElementById("myform").action="project_D/index.html";
+		return true;
+		
+	}
+	
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<center> 
+	
+	<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/logoname.png" alt="United Colors of Benetton" style="width: 200px;height: 100px"> 
+	
+	</center>
+
+<div>
+
+<form action="" name="form" method="post" id="myform">
+
+
+	<fieldset>
+
+		<legend> <h2> Login:  </h2> </legend> <br> <br>
+		
+		<label> <br>
+			<strong> Email: </stron>
+			<input type="email" name="email" placeholder="Enter username" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Enter your Password: </strong> <br>
+			<input type="password" name="password" placeholder="Enter password" autocomplete="off">
+		</label> <br> <br>
+		
+		<center> <input type="submit" value="Login" onclick="Validate()"></center>
+</fieldset>
+
+</form>
+
+</div>
+			
+</body>
+
+</html>
+
+<!-- Home -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header id="main-header">
+		<div class="container">
+			<h1>FIZZI ACCOMMODATORS</h1>
+		</div>
+	</header>
+
+	<nav id="navbar">
+		<div class="container">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="proj.html"> Booking </a></li>
+				<li><a href="contact.html"> Contact Us </a></li>
+				<li style="float: right"><a href="file:///C:/Users/Paavamaani%20Manchala/Documents/HostelManagementSystem/HMS.html">Logout</a></li>
+			</ul>
+		</div>
+		
+	</nav>
+
+	<section id="showcase">
+		<div class="container">
+
+		</div>
+	</section>
+
+	<div class="container">
+		<section id="main">
+			<h1>Welcome</h1>
+			<p> You are at the right place. If you are looking for an excellent 
+			accommodation providers. We are one of the best accommodators in the
+			country. We not only provide the accommodation but also care for your
+			safety and security. We also provide you the an extra space for your
+			extracurricular activities like swimming, gym, fine arts etc. We also 
+			serve you with variety of dishes cooked by the chefs all over the world.</p>
+		</section>
+		<aside id="sidebar">
+		
+		<p style="text-align: center"> Key Features </p>
+			<ul>
+				<li> We provide accomodation for students.</li>
+				<li> Accodation is provided at reasonable price. </li>
+				<li> Food facility is available. </li>
+				<li> Gym is available inside the hostel. and Many more ..</li>
+			</ul>
+		</aside>
+	</div>
+
+	<footer id="main-footer">
+		<p>Copyright &copy; 2018 FIZZI</p>
+	</footer>
+</body>
+</html>
+
+<!-- Booking -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Booking </title>
+
+<style>
+
+input[type=password], input[type=email] {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+outline: none;
+border: 1.5px solid #1EC8DB;
+
+}
+
+select, input[type=text], input[type=number], input[type=date] {
+
+width: 35%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+border: 1.85px solid #1EC8DB;
+outline: none;
+
+}
+
+textarea {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+border: 1.85px solid #1EC8DB;
+outline: none;
+
+}
+
+input[type=submit] {
+
+width: 49%;
+color: white;
+background-color: black;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+float:left;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=reset] {
+
+width: 49%;
+background-color: black;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+float:right;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=password]:focus, input[type=email]:focus, input[type=text]:focus  {
+
+border: 1.89px solid black;
+
+}
+
+div {
+
+border-radius: 8px;
+padding: 40px;
+
+}
+
+fieldset {
+
+margin-left: 27.5%;
+margin-right: 27.5%;
+border: 4px solid #000000;
+background: transparent;
+
+}
+
+#Male, #Female, #Yes {
+
+color: white;
+
+}
+
+body {
+
+background-image: url('signup.jpg');
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+</style>
+
+<script>
+
+function Validate() {
+	
+	var val1 = document.forms["form"]["fname"].value;
+	
+	if(val1 == "") {
+	
+		alert("Enter First Name");
+		return false;
+		
+	}	
+	
+	var val2 = document.forms["form"]["lname"].value;
+	
+	if(val2 == "") {
+	
+		alert("Enter Last Name");
+		return false;
+		
+	}
+	
+	var val3 = document.forms["form"]["email"].value;
+	
+	if(val3 == "") {
+	
+		alert("Enter Email");
+		return false;
+		
+	}
+	
+	var val4 = document.forms["form"]["password"].value;
+	
+	if(val4 == "") {
+		
+		alert("Password is required");
+		return false;
+	
+	}
+	
+	var val5 = document.forms["form"]["confirmpassword"].value;
+	
+	if(val5 == "") {
+	
+		alert("Please confirm your Password");
+		return false;
+	}	
+	
+	var val6 = document.forms["form"]["gender"].value;
+	
+	if(val6 == "") {
+	
+		alert("Please confirm your Gender");
+		return false;
+	}	
+	
+	var val7 = document.forms["form"]["code"].value;
+	
+	if(val7 == "") {
+	
+		alert("Please enter country code");
+		return false;
+	}	
+	
+	var val8 = document.forms["form"]["phone"].value;
+	
+	if(val8 == "") {
+	
+		alert("Please enter mobile number");
+		return false;
+	}	
+	
+	var val9 = document.forms["form"]["bday"].value;
+	
+	if(val9 == "") {
+	
+		alert("Please enter birth date");
+		return false;
+	}
+	
+	var val10 = document.forms["form"]["place"].value;
+	
+	if(val10 == "") {
+	
+		alert("Please enter place");
+		return false;
+	}
+	
+	if(val4==val5) {
+	
+		document.getElementById("myform").action="payment.html";
+		return true;
+	}
+	else {
+	
+		alert("Password and Confirm Password don't match");
+		return false;
+
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<center> 
+	
+	<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/logoname.png" alt="United Colors of Benetton" style="width: 200px;height: 100px"> 
+	
+	</center>
+
+<div>
+
+<form action="" method="post" name="form" id="myform">
+
+
+	<fieldset>
+
+		<legend> <h2> Hostel Booking </h2> </legend> <br> <br>
+		
+		<label>
+			<strong> First Name: </strong>
+			<input type="text" name="fname" placeholder="Enter first name" autocomplete="off">
+		</label> 
+
+		<label>
+			<strong> Last Name: </strong>
+			<input type="text" name="lname" placeholder="Enter last name" autocomplete="off">
+		</label> <br>
+		
+		<label> <br>
+			<strong> Email: </strong> <br>
+			<input type="email" name="email" placeholder="Enter email" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Enter your Password: </strong> <br>
+			<input type="password" name="password" placeholder="Enter password" autocomplete="off">
+		</label> <br> <br>
+
+		<label>
+			<strong> Confirm your Password: </strong> <br>
+			<input type="password" name="confirmpassword" placeholder="Re - enter password" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Gender: </strong>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="gender" value="Male"> <span id="Male"> Male </span>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="gender" value="Female"> <span id="Female"> Female </span>
+		</label> <br> <br>
+		
+		<label>
+			<strong> Birth Date: </strong>
+			<input type="date" name="bday" autocomplete="off">
+		</label>
+
+		<label>
+			<strong> Birth Place: </strong>
+			<input type="text" name="place" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Address: </strong> <br>
+			<textarea rows="4" cols="50" autocomplete="off" placeholder="Enter your address here"></textarea>
+		</label> <br> <br>
+	 
+		<label>
+			<strong> Country Code: </strong>
+			<input type="number" name="code" placeholder="Enter country code" maxlength="3" autocomplete="off">
+		</label>
+	 
+		<label>
+			<strong> Mobile: </strong>
+			<input type="number" name="phone" placeholder="Enter mobile number" maxlength="13" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Hostel Seater: </strong>
+			<select name="seater">
+				<option value="select">- Select -</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+		</label>
+		
+		<label>
+			<strong name="duration"> Duration: </strong>
+			<select>
+				<option value="select">- Select -</option>
+				<option value="six">Six Months</option>
+				<option value="one">One Year</option>
+			</select>
+		</label> <br> <br>
+		
+		<label>
+			<strong> Food Facility: </strong>
+			&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="Food" value="Yes"> <span id="Yes"> Yes </span>
+			&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="Food" value="No" checked> <span id="No" > No </span>
+		</label>
+		
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		
+		<label id="food">
+			<strong> Food Type: </strong>
+			<select>
+				<option value="select">- Select -</option>
+				<option value="six">South Indian</option>
+				<option value="one">North Indian</option>
+			</select>
+		</label> <br> <br>
+		
+	<center> <input type="submit" value="Proceed" onclick="Validate()"> <input type="reset" value="Reset"> </center>
+	
+	<br> <br>
+	
+	</fieldset>
+
+</form>
+
+</div>
+			
+</body>
+
+</html>
+
+<!-- Contact Us -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Booking </title>
+
+<style>
+
+input[type=password], input[type=email] {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+outline: none;
+border: 1.5px solid #1EC8DB;
+
+}
+
+select, input[type=text], input[type=number], input[type=date] {
+
+width: 35%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+border: 1.85px solid #1EC8DB;
+outline: none;
+
+}
+
+textarea {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+border: 1.85px solid #1EC8DB;
+outline: none;
+
+}
+
+input[type=submit] {
+
+width: 100%;
+color: white;
+background-color: black;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+border: 1.5px solid #1EC8DB;
+
+}
+
+input[type=password]:focus, input[type=email]:focus, input[type=text]:focus  {
+
+border: 1.89px solid black;
+
+}
+
+div {
+
+border-radius: 8px;
+padding: 40px;
+
+}
+
+fieldset {
+
+margin-left: 27.5%;
+margin-right: 27.5%;
+border: 4px solid #000000;
+background: transparent;
+
+}
+
+#Male, #Female, #Yes {
+
+color: white;
+
+}
+
+body {
+
+background-image: url('signup.jpg');
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+</style>
+
+<script>
+
+function Validate() {
+	
+	var val1 = document.forms["form"]["fname"].value;
+	
+	if(val1 == "") {
+	
+		alert("Enter First Name");
+		return false;
+		
+	}	
+	
+	var val2 = document.forms["form"]["lname"].value;
+	
+	if(val2 == "") {
+	
+		alert("Enter Last Name");
+		return false;
+		
+	}
+	
+	var val3 = document.forms["form"]["email"].value;
+	
+	if(val3 == "") {
+	
+		alert("Enter Email");
+		return false;
+		
+	}
+	
+	var val4 = document.forms["form"]["password"].value;
+	
+	if(val4 == "") {
+		
+		alert("Password is required");
+		return false;
+	
+	}
+	
+	var val5 = document.forms["form"]["confirmpassword"].value;
+	
+	if(val5 == "") {
+	
+		alert("Please confirm your Password");
+		return false;
+	}	
+	
+	var val6 = document.forms["form"]["gender"].value;
+	
+	if(val6 == "") {
+	
+		alert("Please confirm your Gender");
+		return false;
+	}	
+	
+	var val7 = document.forms["form"]["code"].value;
+	
+	if(val7 == "") {
+	
+		alert("Please enter country code");
+		return false;
+	}	
+	
+	var val8 = document.forms["form"]["phone"].value;
+	
+	if(val8 == "") {
+	
+		alert("Please enter mobile number");
+		return false;
+	}	
+	
+	var val9 = document.forms["form"]["bday"].value;
+	
+	if(val9 == "") {
+	
+		alert("Please enter birth date");
+		return false;
+	}
+	
+	var val10 = document.forms["form"]["place"].value;
+	
+	if(val10 == "") {
+	
+		alert("Please enter place");
+		return false;
+	}
+	
+	var val11 = document.forms["form"]["seater"].value;
+	
+	if(val11 == "select") {
+	
+		alert("Please select seater");
+		return false;
+	}
+	
+	var val12 = document.forms["form"]["duration"].value;
+	
+	if(val12 == "select") {
+	
+		alert("Please select duration");
+		return false;
+	}
+	
+	if(val4==val5) {
+	
+		alert("Your response has been recieved")
+		return true;
+	}
+	else {
+	
+		alert("Password and Confirm Password don't match");
+		return false;
+
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<center> 
+	
+	<img src="C:\Users\Paavamaani Manchala\Pictures\ProjectPictures/logoname.png" alt="United Colors of Benetton" style="width: 200px;height: 100px"> 
+	
+	</center>
+
+<div>
+
+<form action="" method="post" name="form" id="myform">
+
+
+	<fieldset>
+
+		<legend> <h2> Contact Us </h2> </legend> <br> <br>
+		
+		<label>
+			<strong> First Name: </strong>
+			<input type="text" name="fname" placeholder="Enter first name" autocomplete="off">
+		</label> 
+
+		<label>
+			<strong> Last Name: </strong>
+			<input type="text" name="lname" placeholder="Enter last name" autocomplete="off">
+		</label> <br>
+		
+		<label> <br>
+			<strong> Email: </strong> <br>
+			<input type="email" name="email" placeholder="Enter email" autocomplete="off">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Query Type: </strong>
+			<select name="seater">
+				<option value="select">- Select -</option>
+				<option value="1">Complaint</option>
+				<option value="2">Request</option>
+				<option value="3">Suggestion</option>
+			</select>
+		</label>
+		
+		<label>
+			<strong> Query: </strong>
+			<select name="seater">
+				<option value="select">- Select -</option>
+				<option value="1">Accommodation</option>
+				<option value="2">Staff</option>
+				<option value="3">Food</option>
+				<option value="4">Others</option>
+			</select>
+		</label>
+	 
+		<label>
+			<strong> Query Description: </strong> <br>
+			<textarea rows="4" cols="50" autocomplete="off" placeholder="Enter your description here"></textarea>
+		</label> <br> <br>
+	 
+		<label>
+			<strong> Country Code: </strong>
+			<input type="number" name="code" placeholder="Enter country code" maxlength="3" autocomplete="off">
+		</label>
+	 
+		<label>
+			<strong> Mobile: </strong>
+			<input type="number" name="phone" placeholder="Enter mobile number" maxlength="13" autocomplete="off">
+		</label> <br> <br>
+		
+	<center> <input type="submit" value="Submit" onclick="Validate()"> </center>
+	
+	<br> <br>
+	
+	</fieldset>
+
+</form>
+
+</div>
+			
+</body>
+
+</html>
+
+<!-- Payment -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	 
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+         
+        <div class="creditCardForm">
+            <div class="heading">
+                <h1>Confirm Payment</h1>
+            </div>
+            <div class="payment">
+                <form>
+                    <div class="form-group owner">
+                        <label for="owner">Owner Name</label>
+                        <input type="text" class="form-control" id="owner">
+                    </div>
+                    <div class="form-group" id="card-number-field">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber">
+                    </div>
+					<div class="form-group CVV">
+                        <label for="cvv">CVV</label>
+                        <input type="text" class="form-control" id="cvv">
+                    </div>
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					 
+					 <div class="form-group" id="expiration-date">
+                      <label>Expiration Date</label>
+                        <select>
+							<option value="00">- Select -</option>
+                            <option value="01">January</option>
+                            <option value="02">February </option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select>
+							<option value="00">- Select -</option>
+                            <option value="16"> 2016</option>
+                            <option value="17"> 2017</option>
+                            <option value="18"> 2018</option>
+                            <option value="19"> 2019</option>
+                            <option value="20"> 2020</option>
+                            <option value="21"> 2021</option>
+                        </select>
+                    </div> 
+					 <div class="Ppin">
+                        <label for="Pin">Enter Pin</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group" id="credit_cards">
+                        <img src="visa.jpg" id="visa">
+                        <img src="mastercard.jpg" id="mastercard">
+                        <img src="amex.jpg" id="amex">
+                    </div>
+                    <div class="form-group" id="pay-now">
+                        <button type="submit" class="btn btn-default" id="confirm-purchase" onclick="Validate()">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+      
+       
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery.payform.min.js" charset="utf-8"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
